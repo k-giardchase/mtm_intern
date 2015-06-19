@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="mtmIntern">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/StepsController.js"></script>
+    <script src="services/StepsFactory.js"></script>
+    <meta charset="utf-8">
+    <title>This is a test</title>
+  </head>
+  <body ng-controller="StepsCtrl">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <!-- <a class="navbar-brand" ui-sref="home">Home</a> -->
+        <ul>
+          <li ng-repeat="item in "></li>
+        </ul>
+      </div>
+
+    </nav>
+    <h1>Testing</h1>
+    <div ui-view>
+
+    </div>
+  </body>
+</html>
