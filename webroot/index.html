@@ -22,12 +22,16 @@
       </div>
     </nav>
         <div id="sidebar">
-          <ul ng-repeat="item in steps">
-              <li>
+          <ul>
+              <li ng-repeat="item in steps">
                 <label>
                   <input type="checkbox" ng-model="item.complete">
+                  <span class="custom-checkbox"></span>
                   <span ng-class='{complete : item.complete,  incomplete : !item.complete }' ui-sref="{{item.link}}">{{item.name}}</span>
                 </label>
+                <ul>
+                  <li ng-repeat="another in item.othersteps">{{another}}</li>
+                </ul>
               </li>
           </ul>
         </div>

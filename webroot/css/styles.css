@@ -22,20 +22,30 @@
 }*/
 
 body {
-  font-family: Verdana, Helvetica, sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;
   width: 100%;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/*
+**********************************
+SIDEBAR STYLES
+**********************************
+*/
+
 #sidebar {
   /*border-right: 2px solid black;*/
-  padding: 1%;
-  margin: 1%;
-  width: 33%;
+  /*padding: 1%;*/
+  margin-top: 3%;
+  width: 30%;
+  /*height: ;*/
   float: left;
+  background-color: #ECECEC;
 }
 
 #sidebar li {
@@ -46,6 +56,23 @@ body {
   text-decoration: none;
 }
 
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + .custom-checkbox {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url('../img/check_radio_sheet.png') left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + .custom-checkbox {
+    background:url('../img/check_radio_sheet.png') -19px top no-repeat;
+}
+
+
 .complete {
   color: blue;
 }
@@ -53,6 +80,12 @@ body {
 .incomplete {
   color: red;
 }
+
+/*
+**********************************
+NAVBAR STYLES
+**********************************
+*/
 
 .navbar {
   background-color: #f15f22;
@@ -65,10 +98,16 @@ body {
   display: inline-block;
 }
 
+/*
+**********************************
+MAIN CONTENT STYLES
+**********************************
+*/
+
 #main-content {
   width: 60%;
   float: right;
-  margin-right: 1%;
+  margin-right: 5%;
   padding-right: 2%;
 }
 
@@ -83,11 +122,17 @@ a:hover {
   color: inherit;
 }*/
 
+/*
+**********************************
+FOOTER STYLES
+**********************************
+*/
+
 #footer {
   background-color: #f15f22;
   position:fixed;
   bottom:0;
-  height:4%;
+  height: 6%;
   width: 100%;
   text-align: center;
 
@@ -95,7 +140,7 @@ a:hover {
 
 #footer ul {
   margin: 0;
-  padding: 5px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
 
 }
 
@@ -105,8 +150,4 @@ a:hover {
   padding-right: 4%;
   font-weight: bold;
 
-}
-
-.glyphicon {
-  /*display: inline;*/
 }
