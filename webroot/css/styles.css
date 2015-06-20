@@ -1,0 +1,72 @@
+.bs-sidebar.affix {
+  top: 70px;
+}
+
+@media (min-width: 768px) {
+  .bs-sidebar.affix {
+    width: 158px;
+    top: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bs-sidebar.affix {
+    width: 213px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bs-sidebar.affix {
+    width: 263px;
+  }
+}
+
+.complete {
+  color: blue;
+}
+
+.incomplete {
+  color: red;
+}
+
+.navbar {
+  background-color: #f15f22;
+  border-color: none;
+  height: 57px;
+}
+
+.navbar a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}*/
+
+#footer {
+  background-color: #f15f22;
+  position:fixed;
+   bottom:0;
+   height:4%;
+  width: 100%;
+  text-align: center;
+
+}
+
+#footer li {
+  display: inline;
+  color: #FFF;
+  padding-right: 4%;
+  font-weight: bold;
+
+}
+
+.glyphicon {
+  /*display: inline;*/
+}
