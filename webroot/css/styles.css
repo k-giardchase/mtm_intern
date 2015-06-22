@@ -42,6 +42,7 @@ SIDEBAR STYLES
   /*border-right: 2px solid black;*/
   /*padding: 1%;*/
   margin-top: 3%;
+  margin-left: 3%;
   width: 30%;
   /*height: ;*/
   float: left;
@@ -105,7 +106,7 @@ MAIN CONTENT STYLES
 */
 
 #main-content {
-  width: 60%;
+  width: 57%;
   float: right;
   margin-right: 5%;
   padding-right: 2%;
@@ -116,11 +117,11 @@ MAIN CONTENT STYLES
 /*a:visited {
   text-decoration: none;
   color: inherit;
-}
+}*/
 
 a:hover {
-  color: inherit;
-}*/
+  text-decoration: underline;
+}
 
 /*
 **********************************
@@ -135,7 +136,7 @@ FOOTER STYLES
   height: 6%;
   width: 100%;
   text-align: center;
-
+  clear:both;
 }
 
 #footer ul {
@@ -150,4 +151,43 @@ FOOTER STYLES
   padding-right: 4%;
   font-weight: bold;
 
+}
+
+.Modal-backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.Modal-holder {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  z-index: 2;
+  padding: 30px 15px;
+}
+
+.Modal-box {
+  margin: 0 auto;
+  width: 100%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .Modal-box {
+    width: 50%;
+    padding: 30px;
+  }
 }

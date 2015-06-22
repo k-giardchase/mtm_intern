@@ -1,5 +1,11 @@
 <div class="">
   <h1>test qa-basics</h1>
+  <label>
+    <input type="checkbox" ng-model="steps.qa_complete">
+    <span class="custom-checkbox"></span>
+    <span ng-class='{complete : steps.qa_complete,  incomplete : !steps.qa_complete }'>Check Complete</span>
+  </label>
+
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
 
@@ -13,4 +19,8 @@ Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear ga
 
 Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jÃ­cama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. Gumbo kakadu plum komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish asparagus spinach.
   </p>
+
+  <button ui-sref="qa-basics.modal.one">Begin QA Basics</button>
+  <div ui-view="qa-basics.modal" autoscroll="false"></div>
+
 </div>
