@@ -1,4 +1,4 @@
-var mtmIntern = angular.module('mtmIntern', ['ui.router']);
+var mtmIntern = angular.module('mtmIntern', ['ui.router', 'ui.bootstrap']);
 
 mtmIntern.config(function($stateProvider) {
   $stateProvider.state('welcome', {
@@ -33,7 +33,7 @@ mtmIntern.config(function($stateProvider) {
   $stateProvider.state("qa-basics.modal", {
     views:{
       "qa-basics.modal": {
-        templateUrl: "partials/modal.html"
+        templateUrl: "partials/qamodal.html"
       }
     },
     //escape on esc keypress or upon click of modal backdrop
@@ -56,52 +56,65 @@ mtmIntern.config(function($stateProvider) {
     abstract: true //can't be directly transitioned to
   });
 
+
+
+
   //Each step state
 
-  $stateProvider.state("qa-basics.modal.one", {
-    views:{
-      "qa-basics.modal": {
-        templateUrl: "partials/qa-basics.one.html"
-      }
-    }
-  });
+  // $stateProvider.state("qa-basics.modal.one", {
+  //   views:{
+  //     "qa-basics.modal": {
+  //       templateUrl: "partials/qa-basics.one.html"
+  //     }
+  //   }
+  // });
+  //
+  // $stateProvider.state("qa-basics.modal.two", {
+  //   views:{
+  //     "qa-basics.modal": {
+  //       templateUrl: "partials/qa-basics.two.html"
+  //     }
+  //   }
+  // });
+  //
+  // $stateProvider.state("qa-basics.modal.three", {
+  //   views:{
+  //     "qa-basics.modal": {
+  //       templateUrl: "partials/qa-basics.three.html"
+  //     }
+  //   }
+  // });
+  //
+  // $stateProvider.state("qa-basics.modal.four", {
+  //   views:{
+  //     "qa-basics.modal": {
+  //       templateUrl: "partials/qa-basics.four.html"
+  //     }
+  //   }
+  // });
+  //
+  // $stateProvider.state("qa-basics.modal.five", {
+  //   views:{
+  //     "qa-basics.modal": {
+  //       templateUrl: "partials/qa-basics.five.html"
+  //     }
+  //   }
+  // });
 
-  $stateProvider.state("qa-basics.modal.two", {
-    views:{
-      "qa-basics.modal": {
-        templateUrl: "partials/qa-basics.two.html"
-      }
-    }
-  });
 
-  $stateProvider.state("qa-basics.modal.three", {
-    views:{
-      "qa-basics.modal": {
-        templateUrl: "partials/qa-basics.three.html"
-      }
-    }
-  });
 
-  $stateProvider.state("qa-basics.modal.four", {
-    views:{
-      "qa-basics.modal": {
-        templateUrl: "partials/qa-basics.four.html"
-      }
-    }
-  });
 
-  $stateProvider.state("qa-basics.modal.five", {
-    views:{
-      "qa-basics.modal": {
-        templateUrl: "partials/qa-basics.five.html"
-      }
-    }
-  });
+/*
+*********************************
+SETTING UP STATES
+*********************************
+*/
+
 
   $stateProvider.state("setting-up.modal", {
     views:{
       "setting-up.modal": {
-        templateUrl: "partials/modal.html"
+        templateUrl: "partials/settingmodal.html"
       }
     },
     //escape on esc keypress or upon click of modal backdrop
@@ -124,7 +137,7 @@ mtmIntern.config(function($stateProvider) {
     abstract: true //can't be directly transitioned to
   });
 
-  //Each step state
+  // Each step state
 
   $stateProvider.state("setting-up.modal.one", {
     views:{
@@ -166,4 +179,19 @@ mtmIntern.config(function($stateProvider) {
     }
   });
 
+
 });
+
+// var GenModal = function($state, $url){
+//   $views = {};
+//   $views["'" + $state + '.modal' + "'"] = {templateUrl: $url};
+//   return $views;
+// }
+
+// console.log(GenModal('qa-basics', 'partials/qa-basics.one.html'));
+
+// $stateProvider.state('setting-up.modal.one', GenModal('setting-up', 'partials/setting-up.one.html'));
+// $stateProvider.state('setting-up.modal.two', GenModal('setting-up', 'partials/setting-up.two.html'));
+// $stateProvider.state('setting-up.modal.three', GenModal('setting-up', 'partials/setting-up.three.html'));
+// $stateProvider.state('setting-up.modal.four', GenModal('setting-up', 'partials/setting-up.four.html'));
+// $stateProvider.state('setting-up.modal.five', GenModal('setting-up', 'partials/setting-up.five.html'));
