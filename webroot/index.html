@@ -19,7 +19,7 @@
     <nav class="navbar" role="navigation">
     <div class="progressbar">
         <small><em>Progress</em></small>
-        <progressbar class="progress-striped active" value="status()" type="{{type}}">{{status}}</progressbar>        
+        <progressbar class="progress-striped active" value="status()" type="{{type}}">{{total}}%</progressbar>
     </div>
       <div class="navbar-header">
         <a href="/">
@@ -29,19 +29,19 @@
     </nav>
         <div id="sidebar">
           <ul>
-              <li ng-class='{complete : steps.w_complete,  incomplete : !steps.w_complete }'ui-sref="welcome">
+              <li ui-sref="welcome">
                 Welcome
               </li>
-              <li ng-class='{complete : steps.gs_complete,  incomplete : !steps.gs_complete }'ui-sref="getting-started">
+              <li ui-sref="getting-started">
                 Getting Started
               </li>
-              <li ng-class='{complete : steps.setting_complete,  incomplete : !steps.setting_complete }'ui-sref="setting-up">
+              <li ui-sref="setting-up">
                 Setting up Your Dev Environment
               </li>
-              <li ng-class='{complete : steps.qa_complete,  incomplete : !steps.qa_complete }'ui-sref="qa-basics">
+              <li ui-sref="qa-basics">
                 Quality Assurance Basics
               </li>
-              <li ng-class='{complete : steps.faq_complete,  incomplete : !steps.faq_complete }'ui-sref="FAQ">
+              <li ui-sref="FAQ">
                 FAQ
               </li>
           </ul>

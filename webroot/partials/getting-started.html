@@ -1,14 +1,12 @@
-<div class="">
+<div>
   <h1>test getting started</h1>
 
     <label>
-      <input type="checkbox" ng-model="steps.gs_complete">
+      <input type="checkbox" ng-model="steps.gettingStarted">
       <span class="custom-checkbox"></span>
-      <span ng-class='{complete : steps.gs_complete,  incomplete : !steps.gs_complete }'>Check Complete</span>
+      <span ng-class='{complete : steps.gettingStarted,  incomplete : !steps.gettingStarted }'>Check Complete</span>
     </label>
-    <p>
-        {{steps.gs_complete}}
-    </p>
+
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
 
@@ -24,6 +22,6 @@ Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra 
   </p>
 
 
-  <button ui-sref="getting-started.modal.one">Begin QA Basics</button>
+  <button ui-sref="getting-started.modal.one">Get Started</button>
   <div ui-view="getting-started.modal" autoscroll="false"></div>
 </div>

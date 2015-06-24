@@ -39,22 +39,26 @@ SIDEBAR STYLES
 */
 
 #sidebar {
-  /*border-right: 2px solid black;*/
-  /*padding: 1%;*/
+  padding-top: 1%;
+  padding-bottom: 1%;
   margin-top: 3%;
   margin-left: 3%;
   width: 30%;
-  /*height: ;*/
   float: left;
   background-color: #ECECEC;
 }
 
 #sidebar li {
   list-style: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #5bc0de;
 }
 
-#sidebar li a {
-  text-decoration: none;
+#sidebar li:hover {
+  color: #000;
 }
 
 input[type="checkbox"] {
@@ -66,11 +70,11 @@ input[type="checkbox"] + .custom-checkbox {
     height:19px;
     margin:-1px 4px 0 0;
     vertical-align:middle;
-    background:url('../img/check_radio_sheet.png') left top no-repeat;
+    background:url('../img/wizard-checkbox-sprite.png') left top no-repeat;
     cursor:pointer;
 }
 input[type="checkbox"]:checked + .custom-checkbox {
-    background:url('../img/check_radio_sheet.png') -19px top no-repeat;
+    background:url('../img/wizard-checkbox-sprite.png') -19px top no-repeat;
 }
 
 
@@ -196,4 +200,9 @@ FOOTER STYLES
     float: right;
     width: 300px;
     margin-right: 10px;
+}
+
+.panel-group .panel {
+  width: 80%;
+  margin: 0 auto 10px auto;
 }

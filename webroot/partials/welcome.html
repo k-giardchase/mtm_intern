@@ -1,5 +1,12 @@
 <div>
   <h1>Welcome</h1>
+
+  <label>
+    <input type="checkbox" ng-model="steps.welcome">
+    <span class="custom-checkbox"></span>
+    <span ng-class='{complete : steps.welcome,  incomplete : !steps.welcome }'>Check Complete</span>
+  </label>
+
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
 
@@ -19,11 +26,5 @@ Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra 
   <div ui-view>
 
   </div>
-
-<label>
-  <input type="checkbox" ng-model="steps.w_complete">
-  <span class="custom-checkbox"></span>
-  <span ng-class='{complete : steps.w_complete,  incomplete : !steps.w_complete }'>Check Complete</span>
-</label>
 
 </div>
