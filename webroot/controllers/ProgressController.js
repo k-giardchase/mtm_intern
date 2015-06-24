@@ -5,14 +5,14 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
 
 
   $scope.steps = [
-      { name: "Welcome", w_complete: false, test: 20 },
-      { name: "Getting Started", gs_complete: false, test: 20 },
-      { name: "Setting up Your Dev Environment", setting_complete: false, test: 20 },
-      { name: "Quality Assurance Basics", qa_complete: false, test: 20 },
-      { name: "FAQ", faq_complete: false, test: 20 },
+      { name: "Welcome", w_complete: true },
+      { name: "Getting Started", gs_complete: false },
+      { name: "Setting up Your Dev Environment", setting_complete: false },
+      { name: "Quality Assurance Basics", qa_complete: false },
+      { name: "FAQ", faq_complete: false },
     ];
 
-    $scope.complete = function() {
+    $scope.status = function() {
       var total = 0;
         if($scope.steps[0].w_complete) {
           total += 20;
@@ -30,9 +30,11 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
         if($scope.steps[4].faq_complete) {
           total += 20;
         }
+        // $scope.total = total;
+        // console.log($scope.total);
       return total;
     }
 
-    $scope.value = $scope.complete();
+    // $scope.total = $scope.status();
 
 });

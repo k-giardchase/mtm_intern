@@ -191,3 +191,8 @@ FOOTER STYLES
     padding: 30px;
   }
 }
+
+progressbar {
+    float: right;
+    position: absolute;
+}
