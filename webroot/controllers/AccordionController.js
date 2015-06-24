@@ -25,7 +25,8 @@ mtmIntern.controller('AccordionCtrl', function($scope) {
   ];
 
   $scope.status = {
-    isFirstOpen = true,
+    isFirstOpen: true,
     isFirstDisabled: false
   };
+
 });

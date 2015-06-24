@@ -1,6 +1,7 @@
 var mtmIntern = angular.module('mtmIntern', ['ui.router', 'ui.bootstrap']);
 
 mtmIntern.config(function($stateProvider) {
+
   $stateProvider.state('welcome', {
     url: '',
     templateUrl: 'partials/welcome.html'
@@ -27,108 +28,79 @@ mtmIntern.config(function($stateProvider) {
   });
 
   // begin modal views
-  // adapted from blog post: http://www.sitepoint.com/creating-stateful-modals-angularjs-angular-ui-router/
+  //adapted from blog post: http://www.sitepoint.com/creating-stateful-modals-angularjs-angular-ui-router/
 
-  // // base view - must be nested inside each section
-  // $stateProvider.state("qa-basics.modal", {
-  //   views:{
-  //     "qa-basics.modal": {
-  //       templateUrl: "partials/qamodal.html"
-  //     }
-  //   },
-  //   //escape on esc keypress or upon click of modal backdrop
-  //   onEnter: ["$state", function($state) {
-  //     $(document).on("keyup", function(e) {
-  //       if(e.keyCode == 27) {
-  //         $(document).off("keyup");
-  //         $state.go("qa-basics");
-  //       }
-  //     });
-  //
-  //     $(document).on("click", ".Modal-backdrop, .Modal-holder", function() {
-  //       $state.go("qa-basics");
-  //     });
-  //
-  //     $(document).on("click", ".Modal-box, .Modal-box *", function(e) {
-  //       e.stopPropagation();
-  //     });
-  //   }],
-  //   abstract: true //can't be directly transitioned to
-  // });
-  //
-  //
-  //
-  //
-  // Each step state
-  //
-  // $stateProvider.state("qa-basics.modal.one", {
-  //   views:{
-  //     "qa-basics.modal": {
-  //       templateUrl: "partials/qa-basics.one.html"
-  //     }
-  //   }
-  // });
-  //
-  // $stateProvider.state("qa-basics.modal.two", {
-  //   views:{
-  //     "qa-basics.modal": {
-  //       templateUrl: "partials/qa-basics.two.html"
-  //     }
-  //   }
-  // });
-  //
-  // $stateProvider.state("qa-basics.modal.three", {
-  //   views:{
-  //     "qa-basics.modal": {
-  //       templateUrl: "partials/qa-basics.three.html"
-  //     }
-  //   }
-  // });
-  //
-  // $stateProvider.state("qa-basics.modal.four", {
-  //   views:{
-  //     "qa-basics.modal": {
-  //       templateUrl: "partials/qa-basics.four.html"
-  //     }
-  //   }
-  // });
-  //
-  // $stateProvider.state("qa-basics.modal.five", {
-  //   views:{
-  //     "qa-basics.modal": {
-  //       templateUrl: "partials/qa-basics.five.html"
-  //     }
-  //   }
-  // });
-
-$stateProvider.state('qa-basics.modal', {
-  url: '/qa-basics-modal',
-  template: '<h2>Hello World</h2>'
-});
-
-$stateProvider.state('qa-basics.modal.one', {
-  url: '/qa-basics-modal-one',
-  onEnter: function($modal){
-    $modal.open({
-      template: [
-        '<div class="modal-content">',
-        '<div class="modal-header">',
-          '<h3 class="modal-title">Test</h3>',
-        '</div>',
-        '<div class="modal-body">',
-        'TESTING AGAIN',
-        '</div>',
-        '<div class="modal-footer">',
-            '<button class="btn btn-primary" ng-click="$dismiss()">OK</button>',
-          '</div>',
-        '</div>'
-        ].join(''),
-        controller: function($scope){
-          //do something here
+  // base view - must be nested inside each section
+  $stateProvider.state("qa-basics.modal", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qamodal.html"
+      }
+    },
+    //escape on esc keypress or upon click of modal backdrop
+    onEnter: ["$state", function($state) {
+      $(document).on("keyup", function(e) {
+        if(e.keyCode == 27) {
+          $(document).off("keyup");
+          $state.go("qa-basics");
         }
-    });
-  }
-});
+      });
+
+      $(document).on("click", ".Modal-backdrop, .Modal-holder", function() {
+        $state.go("qa-basics");
+      });
+
+      $(document).on("click", ".Modal-box, .Modal-box *", function(e) {
+        e.stopPropagation();
+      });
+    }],
+    abstract: true //can't be directly transitioned to
+  });
+
+
+
+
+  //Each step state
+
+  $stateProvider.state("qa-basics.modal.one", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.one.html"
+      }
+    }
+  });
+
+  $stateProvider.state("qa-basics.modal.two", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.two.html"
+      }
+    }
+  });
+
+  $stateProvider.state("qa-basics.modal.three", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.three.html"
+      }
+    }
+  });
+
+  $stateProvider.state("qa-basics.modal.four", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.four.html"
+      }
+    }
+  });
+
+  $stateProvider.state("qa-basics.modal.five", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.five.html"
+      }
+    }
+  });
 
 
 /*
@@ -202,6 +174,46 @@ SETTING UP STATES
     views:{
       "setting-up.modal": {
         templateUrl: "partials/setting-up.five.html"
+      }
+    }
+  });
+
+  /*
+  *********************************
+  GETTING STARTED STATES
+  *********************************
+  */
+
+  $stateProvider.state("getting-started.modal", {
+    views:{
+      "getting-started.modal": {
+        templateUrl: "partials/gsmodal.html"
+      }
+    },
+    //escape on esc keypress or upon click of modal backdrop
+    onEnter: ["$state", function($state) {
+      $(document).on("keyup", function(e) {
+        if(e.keyCode == 27) {
+          $(document).off("keyup");
+          $state.go("getting-started");
+        }
+      });
+
+      $(document).on("click", ".Modal-backdrop, .Modal-holder", function() {
+        $state.go("getting-started");
+      });
+
+      $(document).on("click", ".Modal-box, .Modal-box *", function(e) {
+        e.stopPropagation();
+      });
+    }],
+    abstract: true //can't be directly transitioned to
+  });
+
+  $stateProvider.state("getting-started.modal.one", {
+    views:{
+      "getting-started.modal": {
+        templateUrl: "partials/gs.one.html"
       }
     }
   });
