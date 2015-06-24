@@ -25,11 +25,17 @@ body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.section-header {
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
 /*
@@ -54,12 +60,24 @@ SIDEBAR STYLES
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: bold;
+  color: #000;
+}
+
+/*#sidebar li:hover {
+  color: #000;
+}*/
+
+/*#sidebar li:active {
+    background: blue;
+}*/
+
+.onview {
+  background-color: #d3d3d3;
+  width: 300px;
+  padding-left: 20px;
   color: #5bc0de;
 }
 
-#sidebar li:hover {
-  color: #000;
-}
 
 input[type="checkbox"] {
     display:none;
@@ -68,13 +86,18 @@ input[type="checkbox"] + .custom-checkbox {
     display:inline-block;
     width:19px;
     height:19px;
-    margin:-1px 4px 0 0;
+    margin:-1px 0 0px 10px;
     vertical-align:middle;
     background:url('../img/check_radio_sheet.png') left top no-repeat;
     cursor:pointer;
 }
 input[type="checkbox"]:checked + .custom-checkbox {
     background:url('../img/check_radio_sheet.png') -19px top no-repeat;
+}
+
+.checkbox-container {
+  display: inline-block;
+  margin-left: 5%;
 }
 
 
@@ -114,6 +137,7 @@ MAIN CONTENT STYLES
   float: right;
   margin-right: 5%;
   padding-right: 2%;
+  padding-bottom: 60px;
 }
 
 
@@ -137,7 +161,7 @@ FOOTER STYLES
   background-color: #f15f22;
   position:fixed;
   bottom:0;
-  height: 6%;
+  height: 60px;
   width: 100%;
   text-align: center;
   clear:both;
@@ -176,7 +200,7 @@ FOOTER STYLES
   width: 100%;
   background: transparent;
   z-index: 2;
-  padding: 30px 15px;
+  padding: 60px 15px;
 }
 
 .Modal-box {
@@ -192,16 +216,47 @@ FOOTER STYLES
 .modal-button {
   /*margin: 0 15%;*/
   display: inline-block;
-  width: 100px;
-  margin: 10px auto;
+  margin: 0 0 1% 20%;
+  background-color: #5bc0de;
+  height: 35px;
+  width: 150px;
+  color: #FFF;
+  border-color: #46b8da;
+  border-radius: 10px;
+  border: 0;
+
 }
 
-.modal-button-left {
-  float: left;
+.first-modal-button {
+  /*margin: 0 15%;*/
+  display: inline-block;
+  margin: 0 0 1% 40%;
+  background-color: #5bc0de;
+  height: 35px;
+  width: 150px;
+  color: #FFF;
+  border-color: #46b8da;
+  border-radius: 10px;
+  border: 0;
+
 }
 
-.modal-button-right {
-  float: right;
+
+.open-modal-button {
+  background-color: #5bc0de;
+  height: 35px;
+  width: 150px;
+  color: #FFF;
+  border-color: #46b8da;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 0;
+}
+
+.open-modal-button:hover {
+  border-color: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -215,9 +270,30 @@ FOOTER STYLES
     float: right;
     width: 300px;
     margin-right: 10px;
+    color: #FFF;
 }
 
 .panel-group .panel {
   width: 80%;
   margin: 0 auto 10px auto;
+}
+
+@media screen and (max-width:1080px) {
+
+  #sidebar {
+    float: none;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  #main-content {
+    float: none;
+    width: auto;
+    padding: 0 4%;
+  }
+
+  .progressbar {
+    display: none;
+  }
+
 }

@@ -9,26 +9,23 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
    $scope.steps.gettingStarted = false;
    $scope.steps.settingUp = false;
    $scope.steps.qaBasics = false;
-   $scope.steps.faq = false;
+  //  $scope.steps.faq = false;
 
 
     $scope.status = function() {
       var total = 0;
         if($scope.steps.welcome) {
-          total += 20;
+          total += 25;
         }
         if ($scope.steps.gettingStarted) {
-          total += 20;
+          total += 25;
         }
 
         if($scope.steps.settingUp) {
-          total +=20;
+          total += 25;
         }
         if($scope.steps.qaBasics) {
-          total += 20;
-        }
-        if($scope.steps.faq) {
-          total += 20;
+          total += 25;
         }
 
       $scope.total = total;

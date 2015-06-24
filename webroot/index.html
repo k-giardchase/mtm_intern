@@ -9,6 +9,7 @@
     <script src="app.js"></script>
     <script src="controllers/ProgressController.js"></script>
     <script src="controllers/AccordionController.js"></script>
+    <script src="controllers/TabsController.js"></script>
     <script src="services/StepsFactory.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -18,7 +19,7 @@
   <body ng-controller="ProgressCtrl">
     <nav class="navbar" role="navigation">
     <div class="progressbar">
-        <small><em>Progress</em></small>
+        <small><em>Your Progress:</em></small>
         <progressbar class="progress-striped active" value="status()" type="{{type}}">{{total}}%</progressbar>
     </div>
       <div class="navbar-header">
@@ -27,21 +28,21 @@
         </a>
       </div>
     </nav>
-        <div id="sidebar">
+        <div id="sidebar" ng-controller="TabsCtrl">
           <ul>
-              <li ui-sref="welcome">
+              <li ui-sref-active="onview" ui-sref="welcome">
                 Welcome
               </li>
-              <li ui-sref="getting-started">
+              <li ui-sref-active="onview" ui-sref="getting-started">
                 Getting Started
               </li>
-              <li ui-sref="setting-up">
+              <li ui-sref-active="onview" ui-sref="setting-up">
                 Setting up Your Dev Environment
               </li>
-              <li ui-sref="qa-basics">
+              <li ui-sref-active="onview" ui-sref="qa-basics">
                 Quality Assurance Basics
               </li>
-              <li ui-sref="FAQ">
+              <li ui-sref-active="onview" ui-sref="FAQ">
                 FAQ
               </li>
           </ul>
