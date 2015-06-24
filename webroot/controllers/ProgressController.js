@@ -14,6 +14,7 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
 
     $scope.status = function() {
       var total = 0;
+      console.log($scope.steps[0][1]);
         if($scope.steps[0].w_complete) {
           total += 20;
         }

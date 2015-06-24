@@ -17,12 +17,14 @@
   </head>
   <body ng-controller="ProgressCtrl">
     <nav class="navbar" role="navigation">
+    <div class="progressbar">
+        <small><em>Progress</em></small>
+        <progressbar class="progress-striped active" value="status()" type="{{type}}">{{status}}</progressbar>        
+    </div>
       <div class="navbar-header">
         <a href="/">
           <img src="/img/metaltoad.png" alt="Metal toad logo">
         </a>
-        <small><em>Progress</em></small>
-    <progressbar class="progress-striped active" value="status()" type="{{type}}">{{status}}</progressbar>
       </div>
     </nav>
         <div id="sidebar">
