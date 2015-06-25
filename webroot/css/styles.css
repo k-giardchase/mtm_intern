@@ -177,18 +177,19 @@ MODAL STYLES
 }
 
 .on-modal-view {
-  background: orange;
+  background: #f15f22;
   color: #FFF;
 }
 
-.pager {
-  /*display: inline;*/
-}
-
 .pager li {
-  /*background-color: grey;*/
+  font-size: 14px;
+  padding: 2px 3px;
   margin-right: 5px;
   float: left;
+}
+
+.pager li:hover {
+  cursor: pointer;
 }
 
 
