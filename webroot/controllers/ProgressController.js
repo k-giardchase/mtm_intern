@@ -12,7 +12,7 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
       { name: "FAQ", faq_complete: false },
     ];
 
-    $scope.status = function() {
+    $scope.progress = function() {
       var total = 0;
       console.log($scope.steps[0][1]);
         if($scope.steps[0].w_complete) {
@@ -31,10 +31,14 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
         if($scope.steps[4].faq_complete) {
           total += 20;
         }
-        // $scope.total = total;
+        $scope.total = total;
         // console.log($scope.total);
       return total;
     }
+
+    // $scope.complete = function(section) {
+    //     steps.
+    // }
 
     // $scope.total = $scope.status();
 
