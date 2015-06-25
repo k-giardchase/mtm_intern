@@ -1,4 +1,11 @@
 <div class="Modal-box">
   <p>This is step five </p>
-  <button ui-sref="qa-basics.modal.four">Go Back</button>
+  <button class="modal-button" ui-sref="qa-basics.modal.four">Go Back</button>
+  <label class="checkbox-container">
+    Check to complete this section:
+
+    <input type="checkbox" ng-model="steps.qaBasics">
+    <span class="custom-checkbox"></span>
+    <!-- <span ng-class='{complete : steps.qaBasics,  incomplete : !steps.qaBasics }'>Check Complete</span> -->
+  </label>
 </div>

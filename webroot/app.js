@@ -218,8 +218,52 @@ SETTING UP STATES
     }
   });
 
+  $stateProvider.state("getting-started.modal.two", {
+    views:{
+      "getting-started.modal": {
+        templateUrl: "partials/gs.two.html"
+      }
+    }
+  });
+
+  $stateProvider.state("getting-started.modal.three", {
+    views:{
+      "getting-started.modal": {
+        templateUrl: "partials/gs.three.html"
+      }
+    }
+  });
+
+  $stateProvider.state("getting-started.modal.four", {
+    views:{
+      "getting-started.modal": {
+        templateUrl: "partials/gs.four.html"
+      }
+    }
+  });
+
+  $stateProvider.state("getting-started.modal.five", {
+    views:{
+      "getting-started.modal": {
+        templateUrl: "partials/gs.five.html"
+      }
+    }
+  });
+
 
 });
+
+
+// mtmIntern.directive('toggleClass', function() {
+//   return {
+//       restrict: 'A',
+//       link: function(scope, element, attrs) {
+//           element.bind('click', function() {
+//               element.toggleClass(attrs.toggleClass);
+//           });
+//       }
+//   };
+// });
 
 // var GenModal = function($state, $url){
 //   $views = {};

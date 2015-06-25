@@ -9,6 +9,7 @@
     <script src="app.js"></script>
     <script src="controllers/ProgressController.js"></script>
     <script src="controllers/AccordionController.js"></script>
+    <script src="controllers/TabsController.js"></script>
     <script src="services/StepsFactory.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -18,8 +19,8 @@
   <body ng-controller="ProgressCtrl">
     <nav class="navbar" role="navigation">
     <div class="progressbar">
-        <small><em>Progress</em></small>
-        <progressbar class="progress-striped active" value="progress()" type="{{type}}">{{progress}}</progressbar>        
+        <small><em>Your Progress:</em></small>
+        <progressbar class="progress-striped active" value="status()" type="{{type}}">{{total}}%</progressbar>
     </div>
       <div class="navbar-header">
         <a href="/">
@@ -27,21 +28,21 @@
         </a>
       </div>
     </nav>
-        <div id="sidebar">
+        <div id="sidebar" ng-controller="TabsCtrl">
           <ul>
-              <li ng-class='{complete : steps.w_complete,  incomplete : !steps.w_complete }'ui-sref="welcome">
+              <li ui-sref-active="onview" ui-sref="welcome">
                 Welcome
               </li>
-              <li ng-class='{complete : steps.gs_complete,  incomplete : !steps.gs_complete }'ui-sref="getting-started">
+              <li ui-sref-active="onview" ui-sref="getting-started">
                 Getting Started
               </li>
-              <li ng-class='{complete : steps.setting_complete,  incomplete : !steps.setting_complete }'ui-sref="setting-up">
+              <li ui-sref-active="onview" ui-sref="setting-up">
                 Setting up Your Dev Environment
               </li>
-              <li ng-class='{complete : steps.qa_complete,  incomplete : !steps.qa_complete }'ui-sref="qa-basics">
+              <li ui-sref-active="onview" ui-sref="qa-basics">
                 Quality Assurance Basics
               </li>
-              <li ng-class='{complete : steps.faq_complete,  incomplete : !steps.faq_complete }'ui-sref="FAQ">
+              <li ui-sref-active="onview" ui-sref="FAQ">
                 FAQ
               </li>
           </ul>
