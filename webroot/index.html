@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="mtmIntern">
   <head>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <script src="lib/angular.js"></script>
@@ -20,7 +21,7 @@
     <nav class="navbar" role="navigation">
     <div class="progressbar">
         <small><em>Your Progress:</em></small>
-        <progressbar class="progress-striped active" value="status()" type="{{type}}">{{total}}%</progressbar>
+        <progressbar class="progress-striped active" value="progress()" type="{{type}}">{{total}}%</progressbar>
     </div>
       <div class="navbar-header">
         <a href="/">
