@@ -1,4 +1,7 @@
 <div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
   <p>This is step five </p>
   <button class="modal-button" ui-sref="qa-basics.modal.four">Go Back</button>
   <label class="checkbox-container">

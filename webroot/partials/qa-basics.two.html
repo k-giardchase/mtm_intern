@@ -1,4 +1,7 @@
 <div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
   <p>This is step two </p>
   <p>
     If I have more content, does that fix why these buttons are appearing so strangely? Let's hope so because I've run out of ideas.

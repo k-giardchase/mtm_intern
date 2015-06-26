@@ -1,4 +1,7 @@
 <div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
   <h1>JIRA</h1>
   <p>Familiarizing yourself with the bug tracking software at Metal Toad is important in understanding how a typical QA workflow operates.  You will need a few things to get started:</p>
 <ul>

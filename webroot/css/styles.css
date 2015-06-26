@@ -1,40 +1,39 @@
-/*#sidebar {
-  top: 70px;
+*{
+  margin: 0;
 }
 
-@media (min-width: 768px) {
-  #sidebar {
-    width: 158px;
-    top: 70px;
-  }
-}
-
-@media (min-width: 992px) {
-  #sidebar {
-    width: 213px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #sidebar {
-    width: 263px;
-  }
-}*/
+/*
+**********************************
+MAIN CONTENT STYLES
+**********************************
+*/
 
 body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+
+}
+
+#main-content {
+  width: 57%;
+  float: right;
+  margin-right: 5%;
+  padding-right: 2%;
+}
+
 .section-header {
-  display: inline-block;
   margin-bottom: 30px;
 }
 
@@ -63,50 +62,12 @@ SIDEBAR STYLES
   color: #000;
 }
 
-/*#sidebar li:hover {
-  color: #000;
-}*/
-
-/*#sidebar li:active {
-    background: blue;
-}*/
-
+/* Active tab style */
 .onview {
   background-color: #d3d3d3;
-  width: 300px;
+  width: 280px;
   padding-left: 20px;
   color: #5bc0de;
-}
-
-
-input[type="checkbox"] {
-    display:none;
-}
-input[type="checkbox"] + .custom-checkbox {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-1px 0 0px 10px;
-    vertical-align:middle;
-    background:url('../img/check_radio_sheet.png') left top no-repeat;
-    cursor:pointer;
-}
-input[type="checkbox"]:checked + .custom-checkbox {
-    background:url('../img/check_radio_sheet.png') -19px top no-repeat;
-}
-
-.checkbox-container {
-  display: inline-block;
-  margin-left: 5%;
-}
-
-
-.complete {
-  color: blue;
-}
-
-.incomplete {
-  color: red;
 }
 
 /*
@@ -128,29 +89,9 @@ NAVBAR STYLES
 
 /*
 **********************************
-MAIN CONTENT STYLES
+MODAL STYLES
 **********************************
 */
-
-#main-content {
-  width: 57%;
-  float: right;
-  margin-right: 5%;
-  padding-right: 2%;
-  padding-bottom: 70px;
-  
-}
-
-
-
-/*a:visited {
-  text-decoration: none;
-  color: inherit;
-}*/
-
-a:hover {
-  text-decoration: underline;
-}
 
 /*
 **********************************
@@ -158,7 +99,7 @@ FOOTER STYLES
 **********************************
 */
 
-#footer {
+/*#footer {
   background-color: #f15f22;
   position:fixed;
   bottom:0;
@@ -180,7 +121,8 @@ FOOTER STYLES
   padding-right: 4%;
   font-weight: bold;
 
-}
+}*/
+
 
 .Modal-backdrop {
   position: fixed;
@@ -242,7 +184,6 @@ FOOTER STYLES
 
 }
 
-
 .open-modal-button {
   background-color: #5bc0de;
   height: 35px;
@@ -267,6 +208,89 @@ FOOTER STYLES
   }
 }
 
+.on-modal-view {
+  background: #f15f22;
+  color: #FFF;
+}
+
+.pager li {
+  font-size: 14px;
+  padding: 2px 3px;
+  margin-right: 5px;
+  float: left;
+}
+
+.pager li:hover {
+  cursor: pointer;
+}
+
+
+/*
+Checkbox styles for modal
+*/
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + .custom-checkbox {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 0 0px 10px;
+    vertical-align:middle;
+    background:url('../img/check_radio_sheet.png') left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + .custom-checkbox {
+    background:url('../img/check_radio_sheet.png') -19px top no-repeat;
+}
+
+.checkbox-container {
+  display: inline-block;
+  margin-left: 5%;
+}
+
+
+/*
+**********************************
+FOOTER STYLES
+**********************************
+*/
+
+#footer {
+  background-color: #f15f22;
+  margin: 0 auto;
+  height: 4em;
+  width: 100%;
+  text-align: center;
+  clear: both;
+  position: fixed;
+  bottom: 0px;
+}
+
+.push {
+  height: 4em;
+}
+
+#footer ul {
+  margin: 0;
+  padding: 10px 0px 0px 0px;
+}
+
+#footer li {
+  display: inline;
+  color: #FFF;
+  padding-right: 4%;
+  font-weight: bold;
+
+}
+
+/*
+**********************************
+PROGRESS BAR STYLES
+**********************************
+*/
+
 .progressbar {
     float: right;
     width: 300px;
@@ -279,11 +303,17 @@ FOOTER STYLES
   margin: 0 auto 10px auto;
 }
 
+
+/*
+**********************************
+MEDIA QUERIES
+**********************************
+*/
 @media screen and (max-width:1080px) {
 
   #sidebar {
     float: none;
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
   }
 
@@ -294,6 +324,13 @@ FOOTER STYLES
   }
 
   .progressbar {
+    display: none;
+  }
+
+}
+
+@media screen and (max-height:650px) {
+  #footer {
     display: none;
   }
 

@@ -48,12 +48,32 @@
               </li>
           </ul>
         </div>
+      </nav>
+      <div id="sidebar" ng-controller="TabsCtrl">
+        <ul>
+            <li ui-sref-active="onview" ui-sref="welcome">
+              Welcome
+            </li>
+            <li ui-sref-active="onview" ui-sref="getting-started">
+              Getting Started
+            </li>
+            <li ui-sref-active="onview" ui-sref="setting-up">
+              Setting up Your Dev Environment
+            </li>
+            <li ui-sref-active="onview" ui-sref="qa-basics">
+              Quality Assurance Basics
+            </li>
+            <li ui-sref-active="onview" ui-sref="FAQ">
+              FAQ
+            </li>
+        </ul>
       </div>
       <div id="main-content" ui-view>
 
       </div>
+      <div class="push">
+      </div>
     </div>
-  </div>
     <div id="footer">
         <ul>
           <li>Help</li>
