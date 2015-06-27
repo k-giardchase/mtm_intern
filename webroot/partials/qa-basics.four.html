@@ -2,6 +2,21 @@
   <ul class="pager">
     <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
   </ul>
-  <p>This is step four </p>
+  <h1>JIRA Basics Review</h1>
+  <p>
+      Run through this checklist to see if you are familiarized enough with JIRA to accomplish the list below:
+  </p>
+  <ol>
+      <li>Login to our JIRA website</li>
+      <li>Find five bugs on the metaltoad-dev.metaltoad.com site. Log all five by using JIRA capture to create an issue with the type "Bug" and the priority set to minor. Assign all issues to the QA Onboarding Project.</li>
+      <li>Create an issue with identical properties (Assigned project, priority, issue type etc…) to step 2 using JIRA capture that contains a screenshot that has been annotated</li>
+      <li>Using the search feature locate the two issues you created (Use the more option to filter by creator)</li>
+      <li>Save that specific search criteria as a filter that you can later refer back to when creating different issues (Information on filters and saving searches is located in the search for issues section of the JIRA 101 guide)</li>
+
+  </ol>
+  <p>
+  If you are able to do all these things you are now ready to manually test and report defects on the different projects your team is working on!
+  </p>
+
   <button class="modal-button" ui-sref="qa-basics.modal.three">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.five">Next</button>
 </div>

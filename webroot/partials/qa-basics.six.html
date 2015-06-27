@@ -1,0 +1,16 @@
+<div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
+  <h1>Epics, User Stories, and User Scenarios</h1>
+  <p>
+      Three important terms to understand are highlighted below:<br>
+      <strong>Epic > User Story > User Scenario</strong>
+  </p>
+  <p>
+      Before continuing on, check out the <a href="http://docs.behat.org/en/v2.5/">Behat</a> documentation to get a thorough explanation of the difference between the three. Then come back here and look at the overview once more.
+  </p>
+
+  <button class="modal-button" ui-sref="qa-basics.modal.five">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.seven">Next</button>
+
+</div>

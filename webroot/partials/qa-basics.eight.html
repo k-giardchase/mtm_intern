@@ -1,0 +1,22 @@
+<div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
+  <h1>Behavior Driven Development + Behat</h1>
+  <p>
+      The user story describes a more specific action that a user may take within that epic.  In order to cover all the actions a user might need to fulfill the epics theme many user stories will be nested within that epic.  An example user story might be:
+  </p>
+  <p>
+      <i>As a user (ROLE)<br>
+      I want to be able to view my purchase history (ACTION)<br>
+      So that I can find past purchases (BENEFIT)</i>
+  </p>
+  <button class="modal-button" ui-sref="qa-basics.modal.four">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.nine">Next</button>
+
+  <label class="checkbox-container">
+    Check to complete this section:
+
+    <input type="checkbox" ng-model="steps.qaBasics">
+    <span class="custom-checkbox"></span>
+  </label>
+</div>

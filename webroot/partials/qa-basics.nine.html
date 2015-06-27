@@ -1,0 +1,15 @@
+<div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
+<p>
+    The user scenario becomes even more granular defining a specific aspect of the parent user story it came from.  These scenarios will likely become the Behat tests:
+</p>
+<p>
+   <i>Given I am an Authenticated user (CONTEXT)<br>
+   When I click the Purchase History tab and I select the “View purchases in last 6 months” filter (EVENT)<br>
+   Then I should see a paginated list of purchases that are dated within the last six months (OUTCOME)</i>
+</p>
+<button class="modal-button" ui-sref="qa-basics.modal.eight">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.six">Next</button>
+
+</div>

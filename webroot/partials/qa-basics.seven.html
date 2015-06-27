@@ -1,0 +1,13 @@
+<div class="Modal-box">
+  <ul class="pager">
+    <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
+  </ul>
+  <h1>Epics</h1>
+  <p>
+      The epic describes a large theme by which many user stories will fall under.  An example epic might be:<br>
+      <i>As a user I should have a way to purchase items from your website</i>
+  </p>
+
+  <button class="modal-button" ui-sref="qa-basics.modal.six">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.eight">Next</button>
+
+</div>

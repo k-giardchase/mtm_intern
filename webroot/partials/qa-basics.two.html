@@ -2,9 +2,18 @@
   <ul class="pager">
     <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
   </ul>
-  <p>This is step two </p>
+  <h1>Configure JIRA Capture</h1>
   <p>
-    If I have more content, does that fix why these buttons are appearing so strangely? Let's hope so because I've run out of ideas.
+  Once you are able to login to the Metal Toad JIRA website and able to create issues lets configure JIRA Capture.  Follow the steps located below:
   </p>
+  <ul>
+      <li>Click the JIRA Capture icon in the upper right hand corner of your browser (blue person with three dots above it) to open the extension.</li>
+      <li>Next click the settings icon (grey gear) if the configuration fields are not already visible on the left hand side of the your browser.</li>
+      <li>Fill in Server URL with metaltoad.atlassian.net</li>
+      <li>Fill in Username with your supplied login username for JIRA</li>
+      <li>Fill in Password with your supplied login password for JIRA</li>
+      <li>Click the save button</li>
+  </ul>
+
   <button class="modal-button" ui-sref="qa-basics.modal.one">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.three">Next</button>
 </div>

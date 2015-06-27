@@ -2,13 +2,10 @@
   <ul class="pager">
     <li ui-sref-active="on-modal-view" ui-sref="{{item.link}}" ng-repeat="item in qa">{{item.page}}</li>
   </ul>
-  <p>This is step five </p>
-  <button class="modal-button" ui-sref="qa-basics.modal.four">Go Back</button>
-  <label class="checkbox-container">
-    Check to complete this section:
+  <h1>Behavior Driven Development + Behat</h1>
+  <p>
+      This next section covers briefly our testing philosophy at Metal Toad and how that translates into acceptance criteria and automated tests.  <a href="http://en.wikipedia.org/wiki/Behavior-driven_development">Behavior Driven Development</a> is based mainly on a mix of <a href="http://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a> and <a href="http://en.wikipedia.org/wiki/Domain-driven_design">Domain-Driven Design</a>.  Ultimately this means a shared domain specific language understood by both the development team and business owners while using the BDD framework.  You could spend a long time unpacking those three different methodologies but I want to focus on how this pertains to testing.
+  </p>
+  <button class="modal-button" ui-sref="qa-basics.modal.four">Go Back</button><button class="modal-button" ui-sref="qa-basics.modal.six">Next</button>
 
-    <input type="checkbox" ng-model="steps.qaBasics">
-    <span class="custom-checkbox"></span>
-    <!-- <span ng-class='{complete : steps.qaBasics,  incomplete : !steps.qaBasics }'>Check Complete</span> -->
-  </label>
 </div>
