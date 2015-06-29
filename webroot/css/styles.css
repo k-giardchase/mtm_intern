@@ -22,7 +22,7 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -100px;
+  margin: 0 auto -60px;
 
 }
 /* Content area where substates are dispalyed */
@@ -231,21 +231,17 @@ FOOTER STYLES
 
 #footer {
   background-color: #f15f22;
-  /*margin: 0 auto;
-  height: 4em;
+  margin: 0 auto;
   width: 100%;
   text-align: center;
-  clear: both;*/
-  /*bottom: 0px;*/
+  clear: both;
   width: 100%;
   clear: both;
-  position: fixed;
-  bottom: 0;
-
+  position: absolute;
 }
 
 #footer, .push {
-  height: 100px;
+  height: 60px;
 }
 
 #footer ul {
