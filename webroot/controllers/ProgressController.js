@@ -42,7 +42,8 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
     { page: 5, link: 'qa-basics.modal.five'},
     { page: 6, link: 'qa-basics.modal.six'},
     { page: 7, link: 'qa-basics.modal.seven'},
-    { page: 8, link: 'qa-basics.modal.eight'}
+    { page: 8, link: 'qa-basics.modal.eight'},
+    { page: 9, link: 'qa-basics.modal.nine'}
   ];
 
   /* Calculates progress - if section is checked complete (true) then add 25 to total complete */
@@ -60,7 +61,7 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
     if($scope.steps.settingUp) {
       total += 25;
     }
-    
+
     if($scope.steps.qaBasics) {
       total += 25;
     }
