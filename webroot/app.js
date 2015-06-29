@@ -56,9 +56,7 @@ mtmIntern.config(function($stateProvider) {
     }],
     abstract: true //can't be directly transitioned to
   });
-
-
-
+  
 
   //Each step state
 
@@ -102,12 +100,43 @@ mtmIntern.config(function($stateProvider) {
     }
   });
 
+  $stateProvider.state("qa-basics.modal.six", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.six.html"
+      }
+    }
+  });
 
-/*
-*********************************
-SETTING UP STATES
-*********************************
-*/
+  $stateProvider.state("qa-basics.modal.seven", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.seven.html"
+      }
+    }
+  });
+
+  $stateProvider.state("qa-basics.modal.eight", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.eight.html"
+      }
+    }
+  });
+
+  $stateProvider.state("qa-basics.modal.nine", {
+    views:{
+      "qa-basics.modal": {
+        templateUrl: "partials/qa-basics.nine.html"
+      }
+    }
+  });
+
+  /*
+  *********************************
+  SETTING UP STATES
+  *********************************
+  */
 
 
   $stateProvider.state("setting-up.modal", {
@@ -249,21 +278,9 @@ SETTING UP STATES
       }
     }
   });
-
-
 });
 
-
-// mtmIntern.directive('toggleClass', function() {
-//   return {
-//       restrict: 'A',
-//       link: function(scope, element, attrs) {
-//           element.bind('click', function() {
-//               element.toggleClass(attrs.toggleClass);
-//           });
-//       }
-//   };
-// });
+//Attempt to construct function to generate all the views
 
 // var GenModal = function($state, $url){
 //   $views = {};
@@ -271,7 +288,6 @@ SETTING UP STATES
 //   return $views;
 // }
 
-// console.log(GenModal('qa-basics', 'partials/qa-basics.one.html'));
 
 // $stateProvider.state('setting-up.modal.one', GenModal('setting-up', 'partials/setting-up.one.html'));
 // $stateProvider.state('setting-up.modal.two', GenModal('setting-up', 'partials/setting-up.two.html'));

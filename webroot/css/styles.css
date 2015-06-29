@@ -8,7 +8,7 @@ MAIN CONTENT STYLES
 **********************************
 */
 
-body {
+html, body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 14px;
   width: 100%;
@@ -22,17 +22,19 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -4em;
+  margin: 0 auto -100px;
 
 }
-
+/* Content area where substates are dispalyed */
 #main-content {
   width: 57%;
   float: right;
   margin-right: 5%;
   padding-right: 2%;
+  height: 100%;
 }
 
+/* Header for #main-content */
 .section-header {
   margin-bottom: 30px;
 }
@@ -92,38 +94,7 @@ NAVBAR STYLES
 MODAL STYLES
 **********************************
 */
-
-/*
-**********************************
-FOOTER STYLES
-**********************************
-*/
-
-/*#footer {
-  background-color: #f15f22;
-  position:fixed;
-  bottom:0;
-  height: 60px;
-  width: 100%;
-  text-align: center;
-  clear:both;
-}
-
-#footer ul {
-  margin: 0;
-  padding: 10px 0px 0px 0px;
-
-}
-
-#footer li {
-  display: inline;
-  color: #FFF;
-  padding-right: 4%;
-  font-weight: bold;
-
-}*/
-
-
+/* Grey backdrop to make page appear disabled */
 .Modal-backdrop {
   position: fixed;
   top: 0px;
@@ -144,6 +115,7 @@ FOOTER STYLES
   background: transparent;
   z-index: 2;
   padding: 60px 15px;
+
 }
 
 .Modal-box {
@@ -154,8 +126,10 @@ FOOTER STYLES
   border-radius: 4px;
   box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
   position: relative;
+
 }
 
+/* Next and Go Back button styles within modal popup */
 .modal-button {
   /*margin: 0 15%;*/
   display: inline-block;
@@ -170,6 +144,7 @@ FOOTER STYLES
 
 }
 
+/* For first Next button that appears on first page of each modal */
 .first-modal-button {
   /*margin: 0 15%;*/
   display: inline-block;
@@ -184,6 +159,7 @@ FOOTER STYLES
 
 }
 
+/* Button to go into modal view in #main-content */
 .open-modal-button {
   background-color: #5bc0de;
   height: 35px;
@@ -195,10 +171,6 @@ FOOTER STYLES
   margin: 0 auto;
   border-radius: 10px;
   border: 0;
-}
-
-.open-modal-button:hover {
-  border-color: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -259,17 +231,21 @@ FOOTER STYLES
 
 #footer {
   background-color: #f15f22;
-  margin: 0 auto;
+  /*margin: 0 auto;
   height: 4em;
   width: 100%;
   text-align: center;
+  clear: both;*/
+  /*bottom: 0px;*/
+  width: 100%;
   clear: both;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
+
 }
 
-.push {
-  height: 4em;
+#footer, .push {
+  height: 100px;
 }
 
 #footer ul {
@@ -320,7 +296,7 @@ MEDIA QUERIES
   #main-content {
     float: none;
     width: auto;
-    padding: 0 4%;
+    padding: 0 10px;
   }
 
   .progressbar {
@@ -329,9 +305,9 @@ MEDIA QUERIES
 
 }
 
-@media screen and (max-height:650px) {
+/*@media screen and (max-height:650px) {
   #footer {
     display: none;
   }
 
-}
+}*/

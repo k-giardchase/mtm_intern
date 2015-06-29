@@ -1,31 +1,21 @@
+/*
+Keeps track of and controlls progress bar in navbar
+*/
+
 mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
-  $scope.max = 100;
-  $scope.type = 'info';
-  // $scope.value = 75;
+  $scope.max = 100; //progress bar max value
+  $scope.type = 'info'; //color of progress bar
 
-  $scope.steps = {};
-
-   $scope.steps.welcome = false;
-   $scope.steps.gettingStarted = false;
-   $scope.steps.settingUp = false;
-   $scope.steps.qaBasics = false;
-
-  $scope.qa = [
-    { page: 1, link: 'qa-basics.modal.one' },
-    { page: 2, link: 'qa-basics.modal.two'},
-    { page: 3, link: 'qa-basics.modal.three'},
-    { page: 4, link: 'qa-basics.modal.four'},
-    { page: 5, link: 'qa-basics.modal.five'}
+  //Set each step status as false to begin with
+  $scope.steps = [
+    { welcome: false },
+    { gettingStarted: false },
+    { settingUp: false },
+    { qaBasics: false },
+    { welcome: false }
   ];
 
-  $scope.setting = [
-    { page: 1, link: 'setting-up.modal.one' },
-    { page: 2, link: 'setting-up.modal.two'},
-    { page: 3, link: 'setting-up.modal.three'},
-    { page: 4, link: 'setting-up.modal.four'},
-    { page: 5, link: 'setting-up.modal.five'}
-  ];
-
+  //GETTING STARTED pagination
   $scope.gStarted = [
     { page: 1, link: 'getting-started.modal.one' },
     { page: 2, link: 'getting-started.modal.two'},
@@ -34,25 +24,49 @@ mtmIntern.controller('ProgressCtrl', function ProgressCtrl($scope) {
     { page: 5, link: 'getting-started.modal.five'}
   ];
 
+  //SETTING UP YOUR DEV ENVIRONMENT pagination
+  $scope.setting = [
+    { page: 1, link: 'setting-up.modal.one' },
+    { page: 2, link: 'setting-up.modal.two'},
+    { page: 3, link: 'setting-up.modal.three'},
+    { page: 4, link: 'setting-up.modal.four'},
+    { page: 5, link: 'setting-up.modal.five'}
+  ];
 
-    $scope.progress = function() {
-      var total = 0;
-        if($scope.steps.welcome) {
-          total += 25;
-        }
-        if ($scope.steps.gettingStarted) {
-          total += 25;
-        }
+  //QA BASICS pagination
+  $scope.qa = [
+    { page: 1, link: 'qa-basics.modal.one' },
+    { page: 2, link: 'qa-basics.modal.two'},
+    { page: 3, link: 'qa-basics.modal.three'},
+    { page: 4, link: 'qa-basics.modal.four'},
+    { page: 5, link: 'qa-basics.modal.five'},
+    { page: 6, link: 'qa-basics.modal.six'},
+    { page: 7, link: 'qa-basics.modal.seven'},
+    { page: 8, link: 'qa-basics.modal.eight'}
+  ];
 
-        if($scope.steps.settingUp) {
-          total += 25;
-        }
-        if($scope.steps.qaBasics) {
-          total += 25;
-        }
+  /* Calculates progress - if section is checked complete (true) then add 25 to total complete */
+  $scope.progress = function() {
+    var total = 0;
 
-      $scope.total = total;
-      return total;
+    if($scope.steps.welcome) {
+      total += 25;
     }
+
+    if ($scope.steps.gettingStarted) {
+      total += 25;
+    }
+
+    if($scope.steps.settingUp) {
+      total += 25;
+    }
+    
+    if($scope.steps.qaBasics) {
+      total += 25;
+    }
+
+    $scope.total = total; //Used to print out total percentage complete in view
+    return total;
+  }
 
 });

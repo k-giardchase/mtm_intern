@@ -1,3 +1,7 @@
+/*
+Controls accordion on FAQ page.
+*/
+
 mtmIntern.controller('AccordionCtrl', function($scope) {
   $scope.oneAtATime = true;
 
@@ -24,6 +28,7 @@ mtmIntern.controller('AccordionCtrl', function($scope) {
     }
   ];
 
+/* Status of accordion content open or closed */
   $scope.accordionstatus = {
     isFirstOpen: true,
     isFirstDisabled: false

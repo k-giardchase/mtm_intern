@@ -18,61 +18,44 @@
     <title>Intern Onboarding</title>
   </head>
   <body ng-controller="ProgressCtrl">
-    <nav class="navbar" role="navigation">
-    <div class="progressbar">
-        <small><em>Your Progress:</em></small>
-        <progressbar class="progress-striped active" value="progress()" type="{{type}}">{{total}}%</progressbar>
-    </div>
-      <div class="navbar-header">
-        <a href="/">
-          <img src="/img/metaltoad.png" alt="Metal toad logo">
-        </a>
-      </div>
-    </nav>
-        <div id="sidebar" ng-controller="TabsCtrl">
-          <ul>
-              <li ui-sref-active="onview" ui-sref="welcome">
-                Welcome
-              </li>
-              <li ui-sref-active="onview" ui-sref="getting-started">
-                Getting Started
-              </li>
-              <li ui-sref-active="onview" ui-sref="setting-up">
-                Setting up Your Dev Environment
-              </li>
-              <li ui-sref-active="onview" ui-sref="qa-basics">
-                Quality Assurance Basics
-              </li>
-              <li ui-sref-active="onview" ui-sref="FAQ">
-                FAQ
-              </li>
-          </ul>
+    <div class="wrapper">
+      <nav class="navbar" role="navigation">
+        <div class="progressbar">
+            <small><em>Your Progress:</em></small>
+            <progressbar class="progress-striped active" value="progress()" type="{{type}}">{{total}}%</progressbar>
+        </div>
+        <div class="navbar-header">
+          <a href="/">
+            <img src="/img/metaltoad.png" alt="Metal toad logo">
+          </a>
         </div>
       </nav>
-      <div id="sidebar" ng-controller="TabsCtrl">
-        <ul>
-            <li ui-sref-active="onview" ui-sref="welcome">
-              Welcome
-            </li>
-            <li ui-sref-active="onview" ui-sref="getting-started">
-              Getting Started
-            </li>
-            <li ui-sref-active="onview" ui-sref="setting-up">
-              Setting up Your Dev Environment
-            </li>
-            <li ui-sref-active="onview" ui-sref="qa-basics">
-              Quality Assurance Basics
-            </li>
-            <li ui-sref-active="onview" ui-sref="FAQ">
-              FAQ
-            </li>
-        </ul>
-      </div>
-      <div id="main-content" ui-view>
+          <div id="sidebar" ng-controller="TabsCtrl">
+            <ul>
+                <li ui-sref-active="onview" ui-sref="welcome">
+                  Welcome
+                </li>
+                <li ui-sref-active="onview" ui-sref="getting-started">
+                  Getting Started
+                </li>
+                <li ui-sref-active="onview" ui-sref="setting-up">
+                  Setting up Your Dev Environment
+                </li>
+                <li ui-sref-active="onview" ui-sref="qa-basics">
+                  Quality Assurance Basics
+                </li>
+                <li ui-sref-active="onview" ui-sref="FAQ">
+                  FAQ
+                </li>
+            </ul>
+          </div>
+        </nav>
+        <div id="main-content" ui-view>
 
-      </div>
-      <div class="push">
-      </div>
+        </div>
+        <div class="push">
+          <!-- pushes footer down and out of main content -->
+        </div>
     </div>
     <div id="footer">
         <ul>
