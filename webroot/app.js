@@ -4,27 +4,31 @@ mtmIntern.config(function($stateProvider) {
 
   $stateProvider.state('welcome', {
     url: '',
-    templateUrl: 'partials/welcome.html'
+    templateUrl: 'partials/welcome.html',
+    controller: 'PageCtrl'
   });
 
   $stateProvider.state('getting-started', {
     url: '/getting-started',
-    templateUrl: 'partials/getting-started.html'
+    templateUrl: 'partials/getting-started.html',
+    controller: 'PageCtrl'
   });
 
   $stateProvider.state('setting-up', {
     url: '/setting-up',
-    templateUrl: 'partials/setting-up.html'
+    templateUrl: 'partials/setting-up.html',
+    controller: 'PageCtrl'
   });
 
   $stateProvider.state('qa-basics', {
     url: '/qa-basics',
-    templateUrl: 'partials/qa-basics.html'
+    templateUrl: 'partials/qa-basics.html',
+    controller: 'PageCtrl'
   });
 
   $stateProvider.state('FAQ', {
     url: '/FAQ',
-    templateUrl: 'partials/FAQ.html'
+    templateUrl: 'partials/FAQ.html',
   });
 
   // begin modal views
@@ -56,7 +60,7 @@ mtmIntern.config(function($stateProvider) {
     }],
     abstract: true //can't be directly transitioned to
   });
-  
+
 
   //Each step state
 

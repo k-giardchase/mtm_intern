@@ -11,7 +11,7 @@
     <script src="controllers/ProgressController.js"></script>
     <script src="controllers/AccordionController.js"></script>
     <script src="controllers/PageController.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="services/PageService.js"></script>
     <meta charset="utf-8">
     <title>Intern Onboarding</title>
   </head>
@@ -28,7 +28,7 @@
           </a>
         </div>
       </nav>
-          <div id="sidebar" ng-controller="TabsCtrl">
+          <div id="sidebar">
             <ul>
                 <li ui-sref-active="onview" ui-sref="welcome">
                   Welcome
@@ -48,7 +48,7 @@
             </ul>
           </div>
         </nav>
-        <div id="main-content" ui-view>
+        <div id="main-content" ui-view ng-controller="PageCtrl">
 
         </div>
         <div class="push">
