@@ -42,23 +42,23 @@ mtmIntern.config(function($stateProvider) {
       }
     },
     //escape on esc keypress or upon click of modal backdrop
-    onEnter: ["$state", function($state) {
-      $(document).on("keyup", function(e) {
-        if(e.keyCode == 27) {
-          $(document).off("keyup");
-          $state.go("qa-basics");
-        }
-      });
-
-      $(document).on("click", ".Modal-backdrop, .Modal-holder", function() {
-        $state.go("qa-basics");
-      });
-
-      $(document).on("click", ".Modal-box, .Modal-box *", function(e) {
-        e.stopPropagation();
-      });
-    }],
-    abstract: true //can't be directly transitioned to
+    // onEnter: ["$state", function($state) {
+    //   $(document).on("keyup", function(e) {
+    //     if(e.keyCode == 27) {
+    //       $(document).off("keyup");
+    //       $state.go("qa-basics");
+    //     }
+    //   });
+    //
+    //   $(document).on("click", ".Modal-backdrop, .Modal-holder", function() {
+    //     $state.go("qa-basics");
+    //   });
+    //
+    //   $(document).on("click", ".Modal-box, .Modal-box *", function(e) {
+    //     e.stopPropagation();
+    //   });
+    // }],
+    // abstract: true //can't be directly transitioned to
   });
 
 
@@ -69,7 +69,7 @@ mtmIntern.config(function($stateProvider) {
       "qa-basics.modal": {
         templateUrl: "partials/qa-basics.one.html"
       }
-    }
+    },
   });
 
   $stateProvider.state("qa-basics.modal.two", {

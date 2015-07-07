@@ -28,19 +28,19 @@
           </a>
         </div>
       </nav>
-          <div id="sidebar">
+          <div id="sidebar" ng-controller="PageCtrl">
             <ul>
                 <li ui-sref-active="onview" ui-sref="welcome">
-                  Welcome
+                  {{template.welcome.menuName}}
                 </li>
                 <li ui-sref-active="onview" ui-sref="getting-started">
-                  Getting Started
+                  {{template.gettingStarted.menuName}}
                 </li>
                 <li ui-sref-active="onview" ui-sref="setting-up">
-                  Setting up Your Dev Environment
+                  {{template.settingUp.menuName}}
                 </li>
                 <li ui-sref-active="onview" ui-sref="qa-basics">
-                  Quality Assurance Basics
+                  {{template.qaBasics.menuName}}
                 </li>
                 <li ui-sref-active="onview" ui-sref="FAQ">
                   FAQ
@@ -48,7 +48,7 @@
             </ul>
           </div>
         </nav>
-        <div id="main-content" ui-view ng-controller="PageCtrl">
+        <div id="main-content" ui-view>
 
         </div>
         <div class="push">
